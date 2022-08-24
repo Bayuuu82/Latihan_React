@@ -1,10 +1,14 @@
 import { Link, Route, Routes } from "react-router-dom";
 import Artis from "../artis/artis";
+import Home from "./home";
 
 function Navigation() {
   return (
     <>
       <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
         <li>
           <Link to="/artis/anya_geraldine">Anya Geraldine</Link>
         </li>
@@ -33,11 +37,27 @@ function Navigation() {
           <Link to="/artis/andien">Andien</Link>
         </li>
         <li>
-          <Link to="/artis/"></Link>
+          <Link to="/artis/bimo">Bimo</Link>
+        </li>
+        <li>
+          <Link to="/artis/mamah_dedeh">Mama Dedeh</Link>
+        </li>
+        <li>
+          <Link to="/artis/irfan_hakim">Irfan Hakim</Link>
+        </li>
+        <li>
+          <Link to="/artis/hijir">Hijir</Link>
+        </li>
+        <li>
+          <Link to="/artis/reka_alamsyah">Reka Alamsyah</Link>
+        </li>
+        <li>
+          <Link to="/artis/heykal">Heykal</Link>
         </li>
       </ul>
       <Routes>
-        <Route path="/post/:nama_artis" element={<Artis />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/artis/:nama_artis' element={<Artis />} />
       </Routes>
     </>
   );
